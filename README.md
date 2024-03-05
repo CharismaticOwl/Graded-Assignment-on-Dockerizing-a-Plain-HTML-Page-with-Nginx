@@ -81,3 +81,9 @@ exposed port 80
 4. Building the Docker Image:
 
    - Build the Docker image using the `Dockerfile`.
+
+--> 
+
+```
+docker build -t graded-assignment-on-dockerizing-a-plain-html-page-with-nginx .
+```
