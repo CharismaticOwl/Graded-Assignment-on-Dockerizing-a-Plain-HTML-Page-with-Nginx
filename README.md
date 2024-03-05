@@ -1,6 +1,11 @@
 # Graded-Assignment-on-Dockerizing-a-Plain-HTML-Page-with-Nginx
 Graded Assignment on Dockerizing a Plain HTML Page with Nginx
 
+
+```
+URL - public.ecr.aws/w4c5t7g4/graded-assignment-on-dockerizing-a-plain-html-page-with-nginx
+```
+
 Solution:
 
 1. Basic HTML Page:
@@ -86,4 +91,33 @@ exposed port 80
 
 ```
 docker build -t graded-assignment-on-dockerizing-a-plain-html-page-with-nginx .
+```
+
+5. Push the image on ECR
+  - Make the public repository and push them on the ECR
+
+-->
+
+used the below commands to tag the image properly and pushed the image to public ECR
+
+```
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/w4c5t7g4
+```
+
+```
+docker build -t graded-assignment-on-dockerizing-a-plain-html-page-with-nginx .
+```
+
+```
+docker tag graded-assignment-on-dockerizing-a-plain-html-page-with-nginx:latest public.ecr.aws/w4c5t7g4/graded-assignment-on-dockerizing-a-plain-html-page-with-nginx:latest
+```
+
+```
+docker push public.ecr.aws/w4c5t7g4/graded-assignment-on-dockerizing-a-plain-html-page-with-nginx:latest
+```
+
+Screenshots attached for the images pushed
+
+```
+URL - public.ecr.aws/w4c5t7g4/graded-assignment-on-dockerizing-a-plain-html-page-with-nginx
 ```
