@@ -121,3 +121,12 @@ Screenshots attached for the images pushed
 ```
 URL - public.ecr.aws/w4c5t7g4/graded-assignment-on-dockerizing-a-plain-html-page-with-nginx
 ```
+
+
+#Additional
+
+```
+Docker compose file created and tested.
+
+checked docker-compose.yaml file
+```
