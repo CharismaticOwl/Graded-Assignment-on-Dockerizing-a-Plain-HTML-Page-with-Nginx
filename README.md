@@ -14,7 +14,7 @@ It will only print
 Welcome to My Website
 Hello, Docker!
 ```
-
+--------------------------------------------------------------------------
 2. Nginx Configuration:
 
    - Create an Nginx configuration file named `nginx.conf` that serves the `index.html` page.
@@ -43,4 +43,41 @@ server {
 
 }
 ```
+--------------------------------------------------------------------------
+3. Dockerfile:
 
+   - Create a `Dockerfile` to define the Docker image.
+
+   - Use an official Nginx base image.
+
+   - Copy the `index.html` and `nginx.conf` files into the appropriate location in the container.
+
+   - Ensure that the Nginx server is started when the container is run.
+
+--> Created a Dockerfile
+
+used base image - 
+```
+nginx:alpine3.18-perl
+```
+on the documenation page or the docker image page itself, we can find the file paths for the root files, and config files
+
+as per documentation - 
+
+```
+html pages file path is located in - /usr/share/nginx/html/
+&&
+configuration file path is - /etc/nginx/conf.d/
+
+```
+
+using RUN command removed the default files in the above file locations
+
+using COPY command, copied the files from local to the docker container
+
+exposed port 80
+--------------------------------------------------------------------------
+
+4. Building the Docker Image:
+
+   - Build the Docker image using the `Dockerfile`.
